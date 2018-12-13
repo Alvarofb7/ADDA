@@ -16,7 +16,7 @@ public class Ejercicio1 {
 		System.out.println(t.getLeft().getHeight());
 		System.out.println(esEquilibrado(t));
 	}
-//KUYKFYUK
+
 //	public static Boolean esEquilibrado(BinaryTree<Integer> t) {
 //		Boolean res = true;
 //		if (!t.isBinary()) {
