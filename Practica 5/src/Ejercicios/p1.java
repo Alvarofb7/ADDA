@@ -30,27 +30,8 @@ public class p1 {
 			res = arbol.getLabel().equals(etiqueta) || 
 			arbol.getChildren().stream().anyMatch(x -> etiqar(x, etiqueta));
 		}
-		
 		return res;
 	}
-
-//	public static Boolean tieneEtiqueta(Tree<Integer> t, Integer etiqueta, Integer i) {
-//		Boolean res = true;
-//		if (t.getChildren() == null) {
-//			return false;
-//		} else {
-//			if (t.getLabel() == etiqueta) {
-//				return res;
-//			} else {
-//				if (i < t.size()) {
-//					return tieneEtiqueta(t.getChild(i), etiqueta, i + 1);
-//				}else {
-//					if(t.getChild(i).getChildren()!=null) {
-//						return tieneEtiqueta(t.getChild(i).getChild(i), etiqueta, i++);
-//					}
-//				}
-//			}
-//		}
-//		return res;
-//	}
+	
+	
 }
