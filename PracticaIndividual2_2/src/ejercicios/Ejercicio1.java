@@ -14,18 +14,6 @@ public class Ejercicio1 {
 		BinaryTree<Integer> tPrueba = BinaryTree.binary(4, t0, t1);
 		BinaryTree<Integer> tNoEqui = BinaryTree.binary(5, t1, BinaryTree.binary(7, BinaryTree.binary(6, t2, t4), t3));
 		
-		
-		System.out.println("If Else\n" + "1º: " +tEqui);
-//		System.out.println("Izq: " + tEqui.getLeft().getHeight());
-//		System.out.println("Der: " + tEqui.getRight().getHeight());
-		System.out.println("¿Arbol equilibrado?: " + esEquilibrado(tEqui));
-		System.out.println("2º: " + tPrueba);
-		System.out.println("¿Arbol equilibrado?: " + esEquilibrado(tPrueba));
-		System.out.println("3º: " +  tNoEqui);
-//		System.out.println("Izq: " + tNoEqui.getLeft().getHeight());
-//		System.out.println("Der: " + tNoEqui.getRight().getHeight());
-		System.out.println("¿Arbol equilibrado?: " + esEquilibrado(tNoEqui));
-		
 		System.out.println("Switch \n1º: " + tEqui);
 		System.out.println("¿Arbol equilibrado?: " + equilibrado(tEqui));
 		System.out.println("2º: " + tPrueba);
@@ -34,21 +22,6 @@ public class Ejercicio1 {
 		System.out.println("¿Arbol equilibrado?: " + equilibrado(tNoEqui));
 	}
 	
-	//If Else
-	public static Boolean esEquilibrado(BinaryTree<Integer> t) {
-		Boolean res = true;
-		if (!t.isBinary() || t.isEmpty()) {
-			return res;
-		} else {
-			Integer izq = t.getLeft().getHeight();
-			Integer der = t.getRight().getHeight();
-			if ((izq - der <= 1 && izq - der >= 0) || izq == der || (der - izq <= 1 && der - izq >= 0)) {
-				return esEquilibrado(t.getLeft()) && esEquilibrado(t.getRight());
-			} else {
-				return false;
-			}
-		}
-	}
 	
 	//Switch
 	public static Boolean equilibrado(BinaryTree<Integer> t) {
@@ -64,7 +37,7 @@ public class Ejercicio1 {
 			Integer izq = t.getLeft().getHeight();
 			Integer der = t.getRight().getHeight();
 			if ((izq - der <= 1 && izq - der >= 0) || izq == der || (der - izq <= 1 && der - izq >= 0)) {
-				res =  esEquilibrado(t.getLeft()) && esEquilibrado(t.getRight());
+				res =  equilibrado(t.getLeft()) && equilibrado(t.getRight());
 			} else {
 				res = false;
 			}
