@@ -38,36 +38,12 @@ public class Ejercicio4 {
 		l.add("x");
 		l.add("y");
 		l.add("z");
-		Comparator<String> c = Comparator.naturalOrder();
-		l.sort(c);
+		
 		System.out.println(l);
 		System.out.println("alvaro: " + busquedaIndice(l, "alvaro"));
-		System.out.println("a: " + busquedaIndice(l, "a"));
-		System.out.println("b: " + busquedaIndice(l, "b"));
-		System.out.println("c: " + busquedaIndice(l, "c"));
-		System.out.println("d: " + busquedaIndice(l, "d"));
-		System.out.println("e: " + busquedaIndice(l, "e"));
-		System.out.println("f: " + busquedaIndice(l, "f"));
-		System.out.println("g: " + busquedaIndice(l, "g"));
-		System.out.println("h: " + busquedaIndice(l, "h"));
-		System.out.println("i: " + busquedaIndice(l, "i"));
-		System.out.println("j: " + busquedaIndice(l, "j"));
-		System.out.println("k: " + busquedaIndice(l, "k"));
-		System.out.println("l: " + busquedaIndice(l, "l"));
-		System.out.println("m: " + busquedaIndice(l, "m"));
-		System.out.println("n: " + busquedaIndice(l, "n"));
-		System.out.println("o: " + busquedaIndice(l, "o"));
-		System.out.println("p: " + busquedaIndice(l, "p"));
-		System.out.println("q: " + busquedaIndice(l, "q"));
-		System.out.println("r: " + busquedaIndice(l, "r"));
-		System.out.println("s: " + busquedaIndice(l, "s"));
-		System.out.println("t: " + busquedaIndice(l, "t"));
-		System.out.println("u: " + busquedaIndice(l, "u"));
-		System.out.println("v: " + busquedaIndice(l, "v"));
-		System.out.println("w: " + busquedaIndice(l, "w"));
-		System.out.println("x: " + busquedaIndice(l, "x"));
-		System.out.println("y: " + busquedaIndice(l, "y"));
-		System.out.println("z: " + busquedaIndice(l, "z"));
+		for(int i=0; i<l.size(); i++) {
+			System.out.println("El índice de " + l.get(i) + " es " + busquedaIndice(l, l.get(i)));
+		}
 
 	}
 
