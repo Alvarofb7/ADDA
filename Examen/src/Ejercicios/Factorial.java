@@ -5,6 +5,7 @@ public class Factorial {
 	public static void main(String[] args) {
 		System.out.println(sfactorial(1024));
 		System.out.println(sfactorialFinal(1024));
+		System.out.println(sfactorialIterativa(1024));
 	}
 	//Recursivo no final
 	public static Integer sfactorial(Integer n) {
@@ -31,6 +32,19 @@ public class Factorial {
 		}
 		return res;
 	}
+	
+	//Iterativa
+	public static Integer sfactorialIterativa(Integer n) {
+		Integer acu = 0;
+		while(!(n<10)) {
+			acu = acu + factorial(n%10);
+			n= n/10;
+		}
+		acu = acu + factorial(n);
+		return acu;
+	}
+	
+	
 	//Metodo auxiliar factorial
 	private static Integer factorial(Integer n) {
 		Integer res = 0;
@@ -41,10 +55,5 @@ public class Factorial {
 		}
 		return res;
 	}
-	
-
-	
-	
-	
 	
 }
