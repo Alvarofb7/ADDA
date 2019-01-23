@@ -16,16 +16,19 @@ public class Ejercicio1 {
 		
 		System.out.println("Switch \n1º: " + tEqui);
 		System.out.println("¿Arbol equilibrado?: " + equilibrado(tEqui));
+
 		System.out.println("2º: " + tPrueba);
 		System.out.println("¿Arbol equilibrado?: " + equilibrado(tPrueba));
+
 		System.out.println("3º: " + tNoEqui);
 		System.out.println("¿Arbol equilibrado?: " + equilibrado(tNoEqui));
+
 	}
 	
 	
 	//Switch
-	public static Boolean equilibrado(BinaryTree<Integer> t) {
-		Boolean res = null;
+	public static <E extends Comparable<E>> Boolean equilibrado(BinaryTree<E> t) {
+		Boolean res = false;
 		switch (t.getType()) {
 		case Empty:
 			res = true;
@@ -39,7 +42,7 @@ public class Ejercicio1 {
 			if ((izq - der <= 1 && izq - der >= 0) || izq == der || (der - izq <= 1 && der - izq >= 0)) {
 				res =  equilibrado(t.getLeft()) && equilibrado(t.getRight());
 			} else {
-				res = false;
+				break;
 			}
 		}	
 		return res;

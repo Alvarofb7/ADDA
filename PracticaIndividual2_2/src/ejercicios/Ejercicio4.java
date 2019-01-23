@@ -1,7 +1,6 @@
 package ejercicios;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 public class Ejercicio4 {
@@ -19,7 +18,7 @@ public class Ejercicio4 {
 		l.add("e");
 		l.add("f");
 		l.add("g");
-		l.add("h");
+		l.add("h"); 
 		l.add("i");
 		l.add("j");
 		l.add("k");
@@ -40,10 +39,10 @@ public class Ejercicio4 {
 		l.add("z");
 		
 		System.out.println(l);
-		System.out.println("alvaro: " + busquedaIndice(l, "alvaro"));
-		for(int i=0; i<l.size(); i++) {
-			System.out.println("El índice de " + l.get(i) + " es " + busquedaIndice(l, l.get(i)));
-		}
+//		System.out.println("alvaro: " + busquedaIndice(l, "alvaro"));
+//		for(int i=0; i<l.size(); i++) {
+//			System.out.println("El índice de " + l.get(i) + " es " + busquedaIndice(l, l.get(i)));
+//		}
 
 	}
 
