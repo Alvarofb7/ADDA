@@ -48,7 +48,7 @@ public class Factorial {
 	//Metodo auxiliar factorial
 	private static Integer factorial(Integer n) {
 		Integer res = 0;
-		if (n == 0 || n == 1) {
+		if (n == 0) {
 			res = 1;
 		} else {
 			res = n*factorial(n-1);
