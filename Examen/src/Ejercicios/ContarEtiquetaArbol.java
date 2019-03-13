@@ -35,7 +35,7 @@ public class ContarEtiquetaArbol {
 
 	public static <E> Integer cuentaXRep2(Tree<E> t, E x) {
 		Integer res = 0;
-//		Integer c = 0;
+		Integer c = 0;
 		switch (t.getType()) {
 		case Empty:
 			break;
@@ -48,15 +48,15 @@ public class ContarEtiquetaArbol {
 			if (t.getLabel().equals(x)) {
 				res = res + 1;
 			}
-			 for(int i = 0; i < t.getNumOfChildren(); i++) {
-			 res = res + cuentaXRep2(t.getChild(i), x);
-//			while (c < t.getNumOfChildren()) {
-//				if (t.getChild(c).equals(x)) {
-//					res++;
-//					c++;
-//				} else {
-//					c++;
-//				}
+//			 for(int i = 0; i < t.getNumOfChildren(); i++) {
+//			 res = res + cuentaXRep2(t.getChild(i), x);
+			while (c < t.getNumOfChildren()) {
+				if (t.getChild(c).equals(x)) {
+					res++;
+					c++;
+				} else {
+					c++;
+				}
 			}
 		}
 		return res;
