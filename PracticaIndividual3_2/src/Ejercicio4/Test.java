@@ -14,6 +14,7 @@ import us.lsi.graphs.EdgeWeight;
 import us.lsi.graphs.GraphsReader;
 import us.lsi.graphs.VertexArrayStringFactory;
 
+
 public class Test {
 
 	private static VertexArrayStringFactory<Monumento> factoriaVertices = Monumento::create;
