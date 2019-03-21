@@ -24,7 +24,7 @@ public class Test {
 	private static EdgeWeight<Camino> ew = Camino::getTiempo;
 	
 	public static void main(String[] args) {
-		Graph<Monumento, Camino> grafo = GraphsReader.newGraph("ficheros/Monumentos.txt", factoriaVertices,
+		Graph<Monumento, Camino> grafo = GraphsReader.newGraph("ficheros/Ejercicio4.txt", factoriaVertices,
 				factoriaAristas,
 				factoriaGrafos,
 				ew);
@@ -34,7 +34,7 @@ public class Test {
 				vertice->vertice.getNombre(),
 				arista->String.format(" (%.1f mins)", arista.getTiempo()));
 		
-		PrintWriter pw = Files2.getWriter("ficheros/Monumentos.gv");
+		PrintWriter pw = Files2.getWriter("ficheros/Ejercicio4.gv");
 		de.exportGraph(grafo, pw);
 	}
 
