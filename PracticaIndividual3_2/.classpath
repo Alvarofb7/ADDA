@@ -11,5 +11,6 @@
 	<classpathentry kind="src" path="/ParteComun"/>
 	<classpathentry kind="src" path="/Grafos"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/DatosCompartidos"/>
+	<classpathentry kind="src" path="/LpSolve"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
