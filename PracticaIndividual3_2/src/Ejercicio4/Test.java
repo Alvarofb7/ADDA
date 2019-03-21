@@ -32,7 +32,7 @@ public class Test {
 		DOTExporter<Monumento, Camino> de = new DOTExporter<Monumento, Camino>(
 				new IntegerComponentNameProvider<>(),
 				vertice->vertice.getNombre(),
-				arista->arista.getTiempo()+String.format(" (%.1f mins)", arista.getTiempo()));
+				arista->String.format(" (%.1f mins)", arista.getTiempo()));
 		
 		PrintWriter pw = Files2.getWriter("ficheros/Monumentos.gv");
 		de.exportGraph(grafo, pw);
