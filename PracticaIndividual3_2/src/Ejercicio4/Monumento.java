@@ -1,8 +1,10 @@
 package Ejercicio4;
 
+
 public class Monumento {
 
 	private String nombre;
+	
 	
 	public Monumento(String nombre) {
 		super();
@@ -24,6 +26,7 @@ public class Monumento {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+
 
 	@Override
 	public int hashCode() {
@@ -52,9 +55,6 @@ public class Monumento {
 
 	@Override
 	public String toString() {
-		return "Monumento [nombre=" + nombre +"]";
+		return "Monumento [nombre=" + nombre + "]";
 	}
-	
-	
-	
 }

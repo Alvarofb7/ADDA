@@ -1,12 +1,6 @@
 package Ejercicio4;
 
 public class Camino {
-	private static int num =0;
-	private Monumento origen;
-	private Monumento destino;
-	private Double m;
-	private int id;
-	
 
 	public static Camino create() {
 		return new Camino();
@@ -20,14 +14,20 @@ public class Camino {
 		return new Camino(c1,c2,formato);
 	}
 
-	public static Camino create(Monumento c1, Monumento c2, Double km) {
-		return new Camino(c1, c2, km);
+	public static Camino create(Monumento c1, Monumento c2, Double tiempo) {
+		return new Camino(c1, c2, tiempo);
 	}
-	
+
+	private static int num =0;
+	private Monumento origen;
+	private Monumento destino;
+	private Double tiempo;
+	private int id;
+
 	private Camino(Monumento c1, Monumento c2) {
 		this.origen = c1;
 		this.destino = c2;
-		this.m = 0.;
+		this.tiempo = 0.;
 		this.id = num;
 		num++;
 	}
@@ -35,60 +35,43 @@ public class Camino {
 	private Camino() {
 		this.origen = null;
 		this.destino = null;
+		this.tiempo = 0.;
 		this.id = num;
 		num++;
 	} 
 	private Camino(Monumento c1, Monumento c2, String[] nombre) {
 		this.origen = c1;
 		this.destino = c2;
-		this.m = Double.parseDouble(nombre[2]);
+		this.tiempo = Double.parseDouble(nombre[2]);
 		this.id = num;
 		num++;
 	}
 	
-	private Camino(Monumento c1, Monumento c2, Double m) {
+	private Camino(Monumento c1, Monumento c2, Double tiempo) {
 		this.origen = c1;
 		this.destino = c2;
-		this.m = m;
+		this.tiempo = tiempo;
 		this.id = num;
 		num++;
 	}
 
-	public Monumento getOrigen() {
+
+	public double getTiempo() {
+		return this.tiempo;
+	}
+
+	
+	public Monumento getorigen(){
 		return origen;
 	}
-
-	public void setOrigen(Monumento origen) {
-		this.origen = origen;
-	}
-
-	public Monumento getDestino() {
+	
+	public Monumento getdestino(){
 		return destino;
-	}
-
-	public void setDestino(Monumento destino) {
-		this.destino = destino;
-	}
-
-	public Double getM() {
-		return m;
-	}
-
-	public void setM(Double m) {
-		this.m = m;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	@Override
 	public String toString() {
-		return "("+getOrigen()+","+getDestino()+","+this.m+")";
+		return "("+getorigen()+","+getdestino()+this.tiempo+")";
 	}
 
 	@Override
@@ -112,4 +95,6 @@ public class Camino {
 			return false;
 		return true;
 	}
+
+	
 }
