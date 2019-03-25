@@ -6,7 +6,7 @@ import us.lsi.lpsolve.solution.AlgoritmoPLI;
 import us.lsi.lpsolve.solution.SolutionPLI;
 
 
-public class Test {
+public class Test_Ejercicio2 {
 
 	public static void main(String[] args) {
 		SolutionPLI alg = AlgoritmoPLI.getSolutionFromFile("./ficheros/Ejercicio2.txt");
