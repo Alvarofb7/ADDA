@@ -44,11 +44,17 @@ public class Test_Ejercicio4 {
 		System.out.println("¿Es el grafo conexo?");
 		esConexo(grafo);
 		
+		System.out.println("----------Solución B----------");
+		System.out.println("Sitio que pueden visitarse sin haber visitado otros antes: ");
+		
+		
+		System.out.println("----------Solución C----------");
+		
 	}
 
 
 	private static void esConexo(Graph<Monumento, Camino> grafo) {
-		ConnectivityInspector<Monumento, Camino> sol = new ConnectivityInspector<Monumento, Camino>(grafo);
+		Connectivit yInspector<Monumento, Camino> sol = new ConnectivityInspector<Monumento, Camino>(grafo);
 		Boolean res = sol.isConnected();
 		if(res==true) {
 			System.out.println("El grafo es conexo");

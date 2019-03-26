@@ -39,11 +39,10 @@ public class Ejercicio4 {
 		l.add("z");
 		
 		System.out.println(l);
-//		System.out.println("alvaro: " + busquedaIndice(l, "alvaro"));
-//		for(int i=0; i<l.size(); i++) {
-//			System.out.println("El índice de " + l.get(i) + " es " + busquedaIndice(l, l.get(i)));
-//		}
-
+		System.out.println("alvaro: " + busquedaIndice(l, "alvaro"));
+		for(int i=0; i<l.size(); i++) {
+			System.out.println("El índice de " + l.get(i) + " es " + busquedaIndice(l, l.get(i)));
+		}
 	}
 
 	public static Integer busquedaIndice(List<String> l, String p) {
