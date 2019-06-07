@@ -20,10 +20,10 @@ public class TestProblemaTspAG {
 		alg.ejecuta();
 		
 		IndexChromosome mejorSolucion = alg.getBestChromosome();
-		System.out.println("=================================");
+		System.out.println("============================================");
 		System.out.println("Camino: " + problem.getSolucion(mejorSolucion));
 		System.out.println("Coste: " + problem.fitnessFunction(mejorSolucion) * -1);
-		System.out.println("=================================");
+		System.out.println("============================================");
 		
 	}
 
@@ -31,7 +31,7 @@ public class TestProblemaTspAG {
 		// Condiciones "evolutivas"
 		AlgoritmoAG.ELITISM_RATE = 0.2;
 		AlgoritmoAG.CROSSOVER_RATE = 0.8;
-		AlgoritmoAG.MUTATION_RATE = 0.0;
+		AlgoritmoAG.MUTATION_RATE = 0.5;
 		AlgoritmoAG.POPULATION_SIZE = 300;
 		
 		StoppingConditionFactory.NUM_GENERATIONS = 1000;

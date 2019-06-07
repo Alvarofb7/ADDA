@@ -1,0 +1,23 @@
+graph G {
+  1 [ label="Monumento0" ];
+  2 [ label="Monumento1" ];
+  3 [ label="Monumento2" ];
+  4 [ label="Monumento3" ];
+  5 [ label="Monumento4" ];
+  6 [ label="Monumento5" ];
+  7 [ label="Monumento6" ];
+  8 [ label="Monumento7" ];
+  9 [ label="Monumento8" ];
+  1 -- 2 [ label=" (15,0 mins)" ];
+  2 -- 3 [ label=" (5,0 mins)" ];
+  1 -- 4 [ label=" (20,0 mins)" ];
+  3 -- 4 [ label=" (10,0 mins)" ];
+  1 -- 5 [ label=" (20,0 mins)" ];
+  5 -- 8 [ label=" (2,0 mins)" ];
+  8 -- 7 [ label=" (10,0 mins)" ];
+  8 -- 6 [ label=" (5,0 mins)" ];
+  5 -- 6 [ label=" (4,0 mins)" ];
+  2 -- 5 [ label=" (3,0 mins)" ];
+  1 -- 9 [ label=" (40,0 mins)" ];
+  5 -- 9 [ label=" (10,0 mins)" ];
+}
